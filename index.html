@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Button Click App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #message {
+            display: none; /* Initially hide the message */
+            margin-top: 20px;
+            font-size: 24px;
+            color: blue;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Simple App!</h1>
+    <button id="myButton">Click Me!</button>
+    <div id="message">Hello, you clicked the button!</div>
+
+    <script>
+        // Get references to the button and message elements
+        const button = document.getElementById('myButton');
+        const message = document.getElementById('message');
+
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            message.style.display = 'block'; // Show the message
+            
+            // Set a timeout to hide the message after 1.5 seconds (1500 ms)
+            setTimeout(function() {
+                message.style.display = 'none'; // Hide the message
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>
